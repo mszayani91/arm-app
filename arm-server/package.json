@@ -1,0 +1,34 @@
+{
+  "name": "arm-server",
+  "version": "1.0.0",
+  "description": "Accounting receipt manager app backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mszayani91/arm-app.git"
+  },
+  "keywords": [
+    "receipt",
+    "manager",
+    "app",
+    "tracker"
+  ],
+  "author": "Mehdi-Salim ZAYANI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mszayani91/arm-app/issues"
+  },
+  "homepage": "https://github.com/mszayani91/arm-app#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.18"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
