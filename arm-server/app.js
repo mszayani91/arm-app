@@ -2,10 +2,11 @@ let express = require('express'),
     mongoose = require('mongoose'),
     dataBaseConfig = require('./database/db');
 bodyParser = require('body-parser'),
+    cors = require('cors');
 
-    //MongoDB Connection
+//MongoDB Connection
 
-    mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;
 mongoose.connect(dataBaseConfig.db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -26,7 +27,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
-
+app.use(cors());
 // PORT
 const port = process.env.PORT || 7000;
 

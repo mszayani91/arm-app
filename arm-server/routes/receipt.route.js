@@ -28,4 +28,18 @@ receiptRoute.route('/receipts').get((req, res) => {
         }
     })
 })
+
+//Delete Receipt
+receiptRoute.route('/receipt/:id').delete((req, res, next) => {
+    ReceiptModel.findByIdAndRemove(req.params.id, (error, data) => {
+        if (error) {
+            return next(error);
+        } else {
+            res.status(200).json({
+                msg: data
+            })
+        }
+    })
+})
+
 module.exports = receiptRoute;

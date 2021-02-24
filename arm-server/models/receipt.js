@@ -5,7 +5,7 @@ let Receipt = new Schema({
     receipt_label: {
         type: String
     },
-    receipt_amout: {
+    receipt_amount: {
         type: Number
     }
 },

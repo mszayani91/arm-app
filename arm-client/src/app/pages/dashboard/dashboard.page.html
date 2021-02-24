@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let receipt of Receipts">
+    <ion-label>{{receipt.receipt_amount}}
+      <p>{{receipt.receipt_label}}</p>
+    </ion-label>
+  </ion-item>
+</ion-content>
