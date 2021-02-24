@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ARM Receipts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Add new receipt</ion-card-subtitle>
+
+    </ion-card-header>
+
+    <ion-card-content>
+      <form [formGroup]="receiptForm" (ngSubmit)="onFormSubmit()">
+        <ion-item>
+          <ion-label position="floating">
+            <h2>Receipt Label</h2>
+          </ion-label>
+          <ion-input formControlName="receipt_label" type="text" placeholder="Shop title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Receipt Amout</ion-label>
+          <ion-input formControlName="receipt_amount" type="text" placeholder="Trasaction amount"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime formControlName="receipt_date" display-format="DD.MM.YYYY HH:mm"></ion-datetime>
+          </ion-item>
+        </ion-item>
+        <ion-button type="submit" expand="block" fill="solid">
+          Add Receipt
+        </ion-button>
+        <ion-button (click)="backToDash()" expand="block" fill="clear" color="secondary">
+          Back to dashboard
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
