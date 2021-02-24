@@ -1,11 +1,11 @@
 let express = require('express'),
     mongoose = require('mongoose'),
     dataBaseConfig = require('./database/db');
+bodyParser = require('body-parser'),
 
+    //MongoDB Connection
 
-//MongoDB Connection
-
-mongoose.Promise = global.Promise;
+    mongoose.Promise = global.Promise;
 mongoose.connect(dataBaseConfig.db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -22,6 +22,10 @@ mongoose.connect(dataBaseConfig.db, {
 
 const receiptRoutes = require('./routes/receipt.route')
 const app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
 // PORT
 const port = process.env.PORT || 7000;
