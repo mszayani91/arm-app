@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ReceiptService } from 'src/app/shared/services/receipt.service';
 
 @Component({
@@ -8,9 +9,12 @@ import { ReceiptService } from 'src/app/shared/services/receipt.service';
 })
 export class DashboardPage implements OnInit {
   Receipts: any = [];
-  constructor(private receiptService: ReceiptService) { }
+  constructor(private receiptService: ReceiptService, private router: Router) { }
 
   ngOnInit() {
+  }
+  addReceipt() {
+    this.router.navigateByUrl('/add-receipt');
   }
   ionViewDidEnter() {
     this.receiptService.getReceiptList().subscribe((res) => {

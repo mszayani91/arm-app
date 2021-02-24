@@ -7,6 +7,10 @@ let Receipt = new Schema({
     },
     receipt_amount: {
         type: Number
+    },
+    receipt_date: {
+        type: Date,
+        default: new Date()
     }
 },
     {
