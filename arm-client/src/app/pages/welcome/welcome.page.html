@@ -1,9 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>welcome</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="welcome-ctr">
+    <h2>Welcome To</h2>
+    <div class="img-box">
+      <img src="../../../assets/icon/undraw_Receipt_re_fre3.svg" alt="" srcset="">
+    </div>
+    <h1>AR MANAGER</h1>
+    <p>ANY RECEIPT ANYWHERE</p>
+    <div class="button-cta ion-padding">
 
+      <ion-button (click)="goDashboard()" shape="round" fill="clear" color="light">
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        Get started
+      </ion-button>
+    </div>
+
+  </div>
 </ion-content>

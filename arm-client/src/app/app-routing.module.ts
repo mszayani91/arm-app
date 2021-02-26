@@ -5,7 +5,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'welcome',
     pathMatch: 'full'
   },
   {
@@ -23,9 +23,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardPageModule)
-  },  {
+  },
+  {
     path: 'add-receipt',
-    loadChildren: () => import('./pages/add-receipt/add-receipt.module').then( m => m.AddReceiptPageModule)
+    loadChildren: () => import('./pages/add-receipt/add-receipt.module').then(m => m.AddReceiptPageModule)
   },
 
 
