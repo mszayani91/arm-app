@@ -1,7 +1,22 @@
 ion-toolbar{
-    --background: #560bad;
-    color: #fff;
+    --background: #e5e5e5;
+    color: #14213d;
     text-align: center;
+   
+    width: 100%;
+  ion-icon{
+      font-size: 25px;
+  }
+ion-icon:nth-child(2){
+    font-size: 35px;
+    color: #560bad;
+}
+ion-buttons{
+    width: 55%;
+
+    display: flex;
+    justify-content: space-between;
+}
 }
 ion-content {
     .main-ctr {
@@ -26,6 +41,7 @@ ion-card-header {
 
 
 }
+
 .add-btn {
     font-size: 1em;
     --background: #560bad;
@@ -45,14 +61,19 @@ ion-card-content{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-       
         height: 100%;
+
         ion-item {
             --highlight-background: unset;
             ion-icon {
                 color: #560bad;
             }
+            ion-label {
+                font-family: 'Raleway',sans-serif;
+                color: #a9a9a9;
+            }
             ion-input {
+                
                 font-family: 'Raleway',sans-serif;
             }
            

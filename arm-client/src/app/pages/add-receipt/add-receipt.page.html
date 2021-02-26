@@ -1,6 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>ARM</ion-title>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button text="back" icon="chevron-back-outline" defaultHref="dashboard"></ion-back-button>
+      </ion-button>
+      <ion-icon name="logo-web-component"></ion-icon>
+
+
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -28,11 +35,13 @@
             <ion-datetime placeholder="Date" formControlName="receipt_date" display-format="DD.MM.YYYY">
             </ion-datetime>
           </ion-item>
+
           <ion-item>
             <ion-icon slot="start" name="apps-outline"></ion-icon>
 
-            <ion-label>Categories</ion-label>
-            <ion-select value="food-drinks" multiple="true" formControlName="receipt_tags">
+            <ion-label>Tags</ion-label>
+            <ion-select mode="ios" interface="action-sheet" value="food-drinks" multiple="true"
+              formControlName="receipt_tags" cancelText="Cancel" okText="Add">
               <ion-select-option value="food-drinks"> Food & Drinks</ion-select-option>
               <ion-select-option value="tech-products">High Tech</ion-select-option>
               <ion-select-option value="medical-products">Medic</ion-select-option>

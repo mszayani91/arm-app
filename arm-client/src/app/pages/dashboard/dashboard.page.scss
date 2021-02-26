@@ -1,6 +1,3 @@
-ion-icon {
-    
-}
 
 ::-webkit-scrollbar,
 *::-webkit-scrollbar {
@@ -19,7 +16,7 @@ ion-content {
 }
 
  ion-toolbar {
-     
+ 
 ion-title{
     color: #fff;
     text-transform: capitalize;
@@ -34,6 +31,7 @@ ion-title{
         align-items: center;
         justify-content: center;
         ion-searchbar {
+            --background: #fff;
             text-align: center;
             width: 100%;
             padding: 0 7% 0 5%;
@@ -48,7 +46,7 @@ ion-title{
             ion-buttons {
                 ion-button {
                     ion-icon {
-                        color: #560bad;
+                        color: #14213d;
                     }
                 }
             }
@@ -59,14 +57,18 @@ ion-title{
 
     width: 100%;
     ion-buttons {
-   
+        &:nth-child(1){
+            
+            font-size: 35px;
+            color: #560bad;
+        }
         display: flex;
         width: 100%;
         justify-content: space-between;
         ion-button {
             ion-icon {
-                font-size: 2em;
-                color: #fff;
+                font-size: 25px;
+            
                 font-weight: 600;
                 margin-right: 5%;
             
