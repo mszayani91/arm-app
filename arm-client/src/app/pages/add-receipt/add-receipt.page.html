@@ -1,41 +1,53 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>ARM Receipts</ion-title>
+    <ion-title>ARM</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Add new receipt</ion-card-subtitle>
+  <div class="main-ctr">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>new receipt</ion-card-subtitle>
 
-    </ion-card-header>
+      </ion-card-header>
 
-    <ion-card-content>
-      <form [formGroup]="receiptForm" (ngSubmit)="onFormSubmit()">
-        <ion-item>
-          <ion-label position="floating">
-            <h2>Receipt Label</h2>
-          </ion-label>
-          <ion-input formControlName="receipt_label" type="text" placeholder="Shop title"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Receipt Amout</ion-label>
-          <ion-input formControlName="receipt_amount" type="text" placeholder="Trasaction amount"></ion-input>
-        </ion-item>
-        <ion-item>
+      <ion-card-content>
+        <form [formGroup]="receiptForm" (ngSubmit)="onFormSubmit()">
           <ion-item>
-            <ion-label>Date</ion-label>
-            <ion-datetime formControlName="receipt_date" display-format="DD.MM.YYYY HH:mm"></ion-datetime>
+            <ion-icon slot="start" name="storefront-outline"></ion-icon>
+            <ion-input formControlName="receipt_label" type="text" placeholder="Shop title"></ion-input>
           </ion-item>
-        </ion-item>
-        <ion-button type="submit" expand="block" fill="solid">
-          Add Receipt
-        </ion-button>
-        <ion-button (click)="backToDash()" expand="block" fill="clear" color="secondary">
-          Back to dashboard
-        </ion-button>
-      </form>
-    </ion-card-content>
-  </ion-card>
+          <ion-item>
+            <ion-icon slot="start" name="cash-outline"></ion-icon>
+            <ion-input formControlName="receipt_amount" type="text" placeholder="Amount"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon slot="start" name="calendar-outline"></ion-icon>
+            <ion-datetime placeholder="Date" formControlName="receipt_date" display-format="DD.MM.YYYY">
+            </ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-icon slot="start" name="apps-outline"></ion-icon>
+
+            <ion-label>Categories</ion-label>
+            <ion-select value="food-drinks" multiple="true" formControlName="receipt_tags">
+              <ion-select-option value="food-drinks"> Food & Drinks</ion-select-option>
+              <ion-select-option value="tech-products">High Tech</ion-select-option>
+              <ion-select-option value="medical-products">Medic</ion-select-option>
+            </ion-select>
+
+          </ion-item>
+
+          <ion-button class="add-btn" type="submit" expand="block" fill="solid">
+            Add Receipt
+          </ion-button>
+          <ion-button class="back-btn" (click)="backToDash()" expand="block" fill="clear">
+            Back to dashboard
+          </ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

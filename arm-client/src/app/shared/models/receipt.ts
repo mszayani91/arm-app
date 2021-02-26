@@ -3,4 +3,5 @@ export class Receipt {
     receipt_label: string;
     receipt_amount: number;
     receipt_date: Date;
+    receipt_tags: [String];
 }

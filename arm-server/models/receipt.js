@@ -11,6 +11,9 @@ let Receipt = new Schema({
     receipt_date: {
         type: Date,
         default: new Date()
+    },
+    receipt_tags: {
+        type: [String]
     }
 },
     {

@@ -19,6 +19,7 @@ export class AddReceiptPage implements OnInit {
     this.receiptForm = this.fb.group({
       receipt_label: [''],
       receipt_amount: [],
+      receipt_tags: [''],
       receipt_date: new Date()
     })
   }

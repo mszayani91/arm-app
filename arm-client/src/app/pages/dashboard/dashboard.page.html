@@ -1,22 +1,58 @@
 <ion-header>
-  <ion-toolbar>
+  <!-- <ion-toolbar>
     <ion-icon slot="end" name="notifications-outline" color="dark"></ion-icon>
     <ion-button slot="end" (click)="addReceipt()" fill="clear">
       <ion-icon slot="start" class="icobag" name="add-outline"></ion-icon>
     </ion-button>
+  </ion-toolbar> -->
+
+
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="grid-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="addReceipt()">
+        <ion-icon slot="end" name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>aRM dashboard</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar id="test" placeholder="Recherche Ticket"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="box-ctr ion-padding">
+
+<ion-content color="light " class="ion-padding">
+  <div class="box-ctr">
     <div class="box-item ion-padding" *ngFor="let receipt of Receipts">
       <ion-label>
         <p>{{receipt.receipt_date | date}}</p>
         <h2>{{receipt.receipt_label}}</h2>
-        <h3>{{receipt.receipt_amount}} $</h3>
+
       </ion-label>
+      <h3>{{receipt.receipt_amount}} $</h3>
+
+
       <ion-icon name="receipt-outline"></ion-icon>
+      <!-- <ion-item *ngFor="let tag of receipt.receipt_tags">
+
+        <ion-chip color="primary" mode="ios" outline="true">
+          <ion-label>
+            {{receipt.receipt_tags}}
+          </ion-label>
+        </ion-chip>
+      </ion-item> -->
     </div>
+
   </div>
 
 
